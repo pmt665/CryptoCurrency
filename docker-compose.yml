@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  cryptocurrency:
+    image: cryptocurrency
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      EXTERNALAPIKEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c
+      INTERNALAPIKEY: f440bc70-b57e-4ff6-9482-52bd561f8f1a
+    ports:
+      - 5000:5000
